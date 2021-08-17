@@ -1,0 +1,46 @@
+/*
+Load external files
+*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+/*
+Header style
+*/
+.platform-header {
+  width: 100vw;
+  min-height: 70px;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 20% 70% 1fr;
+  grid-template-areas:
+    "logo   navbar  powerOff";
+  background-color: white;
+}
+
+#axa-logo {
+  min-height: 70px;
+  height: 10vh;
+  grid-area: logo;
+}
+
+#power-off {
+  min-height: 50px;
+  min-width: 50px;
+  height: 10vh;
+  width: 10vh;
+  grid-area: powerOff;
+}
+
+
+/*
+Footer style
+*/
+.platform-footer {
+  width: 100vw;
+  height: 5vh;
+  background-color: black;
+  color: white;
+  /* border: 1px solid blue; */
+  padding: 1vh;
+}

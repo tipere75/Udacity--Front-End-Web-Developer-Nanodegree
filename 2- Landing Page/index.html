@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actuarial Tools</title>
+    <link rel="stylesheet" href="css/header and footer style.css">
+    <link rel="stylesheet" href="css/platform style.css">
   </head>
   <body>
-
+    <!-- Header -->
+    <header class="platform-header">
+      <div class="photo-box" id="axa-logo-container">
+        <img src="images/axa logo.jpg" alt="AXA logo" id="axa-logo">
+      </div>
+      <!-- <nav class="platform-navbar-menu"> -->
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <!-- <ul id="platform-navbar-list"></ul> -->
+      <!-- </nav> -->
+      <button type="button" class="button" id="power-off"><i class="fa fa-power-off"></i></button>
+    </header>
+    <!-- Body -->
+    <main class="platform-main">
+      <!-- Pricing tools: PPI/GAP, pricing comparator -->
+      <section class="platform-tool-category-section" id="platform-pricing-tools-section" data-nav="Pricing tools">
+        <h1>Pricing tools</h1>
+        <h3 class="tool-launch">PPI/GAP Pricing tool</h3>
+        <p class="tool-introduction">Pricing tool for loan, lifestyle and GAP products. It provides the premium estimation and the theoretical profitability of the priced portfolio.</p>
+        <h3 class="tool-launch">Pricing comparator</h3>
+        <p class="tool-introduction">Market positioning study based on the comparison between theoretical premium and real written premium.</p>
+      </section>
+      <!-- Profitability tools: per client, PAP, Strat Plan, CQS -->
+      <section class="platform-tool-category-section" id="platform-profitability-tools-section" data-nav="Profitability tools">
+        <h1>Profitability tools</h1>
+        <h3 class="tool-launch">Per client profitability tool</h3>
+        <p class="tool-introduction">Profitability study of a portfolio based on the database from a partner and an assumptions file provided by the Assumptions team.</p>
+        <h3 class="tool-launch">PAP tool</h3>
+        <p class="tool-introduction">Short term and ultimate profitability of a portfolio based on the datalake and the assumptions files provided by the Assumptions team.</p>
+        <h3 class="tool-launch">Strategic Planning tool</h3>
+        <p class="tool-introduction">Short term business unit profitability estimation.</p>
+        <h3 class="tool-launch">CQS tool</h3>
+        <p class="tool-introduction">Profitability study of the whole CQS database.</p>
+      </section>
+      <!-- Assumption's tools: proximity study, GLM -->
+      <section class="platform-tool-category-section" id="platform-assumptions-tools-section" data-nav="Assumptions tools">
+        <h1>Assumptions tools</h1>
+        <h3 class="tool-launch">Proximity study tool</h3>
+        <p class="tool-introduction"></p>
+        <h3 class="tool-launch">GLM tool</h3>
+        <p class="tool-introduction"></p>
+      </section>
+      <!-- Other tools: reserving, ESG -->
+      <section class="platform-tool-category-section" id="platform-other-tools-section" data-nav="Other tools">
+        <h1>Other tools</h1>
+        <h3 class="tool-launch">Economic Scenario Generator</h3>
+        <p class="tool-introduction">Economic scenarios generator based on financial models. It allows the user to predict unemployment rates in years to come based on some eocnomic indicator such as the GDP or the inflation.</p>
+        <h3 class="tool-launch">Reserving tool</h3>
+        <p class="tool-introduction">Reserves computation for life products.</p>
+      </section>
+      <!-- Other functionality: about page, add new user -->
+      <section class="platform-tool-category-section" id="platform-other-functionalities-section" data-nav="Other">
+        <h1>Other</h1>
+        <h3 class="tool-launch">About page</h3>
+        <p class="tool-introduction">Platform description: its main goal and how to use it. It also provides contacts to reach out it case of errors with the platform or to perform the analysis of a complex deal or partner.</p>
+        <h3 class="tool-launch">Add new user</h3>
+        <p class="tool-introduction">New underwritter profile creation. This new underwritter can then use any tool he/she has clearance to use.</p>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="platform-footer">
+      <p>&copy Copyrights 2021</p>
+    </footer>
+    <script type="text/javascript" src="js/platform.js"></script>
   </body>
 </html>
