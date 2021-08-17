@@ -1,0 +1,108 @@
+/*
+Import external files
+*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("header and footer.css");
+@import url("typography.css");
+
+/*
+Overall layout
+*/
+.container {
+  display: grid;
+  grid-template-columns: 75vw 18vw;
+  grid-template-rows: 15vh 40vh 40vh 5vh;
+  grid-gap: 10px;
+  grid-template-areas:
+    "top            top"
+    "firstRowLeft   right"
+    "secondRowLeft  ....."
+    "bottom         bottom";
+  justify-content: center;
+  text-align: center;
+}
+
+
+/*
+Content
+*/
+.image {
+  width: 60%;
+  object-fit: cover;
+  padding-right: 5px;
+  justify-content: flex-start;
+}
+
+.box {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px grey;
+}
+
+.button {
+  padding: 6px;
+  font-weight: bold;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid blue;
+  border-radius: 5px;
+  justify-content: center;
+  text-decoration: none;
+}
+.button:hover {
+  box-shadow: 1px 1px 1px grey;
+}
+
+/* boxes organization */
+#box-hobbiton {
+  display: flex;
+  grid-area: firstRowLeft;
+}
+
+#box-waitangi {
+  display: flex;
+  grid-area: secondRowLeft;
+}
+
+.presentation {
+  max-width: 40%;
+}
+
+/*
+Navbar
+*/
+#box-right {
+  display: flex;
+  grid-area: right;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-sidebar {
+  display: flex;
+  margin-top: 10px;
+  padding: 5px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  max-height: 22px;
+}
+.nav-sidebar a {
+  text-decoration: none;
+  color: black;
+  padding: 2px;
+}
+.navbar-posts-list {
+  text-decoration: none;
+  line-height: 30px;
+  list-style-type: none;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}
+.navbar-posts-list a{
+  text-decoration: none;
+  color: black;
+}

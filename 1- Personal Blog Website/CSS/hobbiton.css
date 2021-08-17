@@ -1,0 +1,163 @@
+/*
+Import external files
+*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("header and footer.css");
+@import url("typography.css");
+
+
+/*
+Overall layout
+*/
+.container {
+  display: grid;
+  grid-template-columns: 75vw 18vw;
+  grid-template-rows: 15vh 80vh 5vh;
+  grid-gap: 10px;
+  grid-template-areas:
+    "top      top"
+    "left     right"
+    "bottom   bottom";
+  justify-content: center;
+  text-align: center;
+}
+
+
+/*
+Content
+*/
+.box {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px grey;
+}
+
+
+/*
+Navbar
+*/
+#box-sidebar {
+  display: flex;
+  grid-area: right;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-sidebar {
+  display: flex;
+  margin-top: 10px;
+  padding: 5px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  max-height: 22px;
+}
+.nav-sidebar a {
+  text-decoration: none;
+  color: black;
+  padding: 2px;
+}
+
+
+/*
+Bio
+*/
+.bio {
+  justify-content: center;
+  text-align: left;
+  padding-left: 10px;
+  height: 500px;
+}
+.bio-image-container {
+  display: flex;
+  justify-content: center;
+}
+#bio-title {
+  text-align: center;
+}
+#profile-picture {
+  border: 3px solid blue;
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+}
+.social-network-links {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+/*
+Content
+*/
+#box-content {
+  display: grid;
+  grid-area: left;
+  text-align: left;
+  padding: 10px;
+}
+/* photos */
+.photo-grid {
+  display: grid;
+  min-height: 250px;
+  grid-template-columns: 50% 50%;
+  grid-gap: 7px;
+  justify-content: center;
+}
+.photo-box {
+  background-size: cover;
+}
+#photo-1 {
+  background-image: url("../images/hobbiton2.JPG");
+}
+#photo-2 {
+  background-image: url("../images/hobbiton3.JPG");
+}
+#photo-3 {
+  background-image: url("../images/hobbiton4.JPG");
+}
+#photo-4 {
+  background-image: url("../images/hobbiton5.JPG");
+}
+
+/* comment */
+#bilbo-quote {
+  border-left: 2px solid CornflowerBlue;
+  padding-left: 5px;
+}
+.blog-post a {
+  text-decoration: none;
+}
+
+
+/*
+Deal with small size screens: responsive layout
+*/
+@media (min-width: 900px) {
+  .photo-grid {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-gap: 7px;
+    justify-content: center;
+  }
+  .photo-box {
+    background-size: cover;
+  }
+  #photo-1 {
+    background-image: url("../images/hobbiton2.JPG");
+  }
+  #photo-2 {
+    background-image: url("../images/hobbiton3.JPG");
+  }
+  #photo-3 {
+    background-image: url("../images/hobbiton4.JPG");
+  }
+  #photo-4 {
+    background-image: url("../images/hobbiton5.JPG");
+  }
+}
