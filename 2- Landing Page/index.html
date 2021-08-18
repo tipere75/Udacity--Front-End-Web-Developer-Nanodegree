@@ -15,13 +15,7 @@
       </div>
       <nav class="platform-navbar-menu">
         <!-- Navigation starts as empty UL that will be populated with JS -->
-        <ul id="platform-navbar-list">
-          <li><a href="#" class="platform-navbar-link">Pricing tools</a></li>
-          <li><a href="#" class="platform-navbar-link">Profitability tools</a></li>
-          <li><a href="#" class="platform-navbar-link">Assumptions tools</a></li>
-          <li><a href="#" class="platform-navbar-link">Models tools</a></li>
-          <li><a href="#" class="platform-navbar-link">Other</a></li>
-        </ul>
+        <ul id="platform-navbar-list"></ul>
       </nav>
       <button type="button" class="button" id="power-off"><i class="fa fa-power-off"></i></button>
     </header>
@@ -30,10 +24,14 @@
       <!-- Pricing tools: PPI/GAP, pricing comparator -->
       <section class="platform-section" id="platform-pricing-tools-section" data-nav="Pricing tools">
         <h1>Pricing tools</h1>
-        <h3 class="tool-launch">PPI/GAP Pricing tool</h3>
-        <p class="tool-introduction">Pricing tool for loan, lifestyle and GAP products. It provides the premium estimation and the theoretical profitability of the priced portfolio.</p>
-        <h3 class="tool-launch">Pricing comparator</h3>
-        <p class="tool-introduction">Market positioning study based on the comparison between theoretical premium and real written premium.</p>
+        <div class="tools-shortcut">
+          <h3 class="tool-launch">PPI/GAP Pricing tool</h3>
+          <h3 class="tool-launch">Pricing comparator</h3>
+        </div>
+        <div class="tools-description">
+          <p class="tool-introduction">Pricing tool for loan, lifestyle and GAP products. It provides the premium estimation and the theoretical profitability of the priced portfolio.</p>
+          <p class="tool-introduction">Market positioning study based on the comparison between theoretical premium and real written premium.</p>
+        </div>
       </section>
       <!-- Profitability tools: per client, PAP, Strat Plan, CQS -->
       <section class="platform-section" id="platform-profitability-tools-section" data-nav="Profitability tools">
@@ -76,6 +74,6 @@
     <footer class="platform-footer">
       <p>&copy Copyrights 2021</p>
     </footer>
-    <!-- <script type="text/javascript" src="js/platform.js"></script> -->
+    <script type="text/javascript" src="js/platform.js"></script>
   </body>
 </html>
