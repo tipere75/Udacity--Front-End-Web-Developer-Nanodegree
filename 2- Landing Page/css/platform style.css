@@ -7,7 +7,9 @@ Load external files
 /*
 Global
 */
-
+h1 {
+  border-bottom: 1px solid gold;
+}
 
 
 
@@ -24,13 +26,58 @@ body {
 
 
 .platform-main {
-  padding-top: 6em;
-  padding-left: 2em;
-  /* width: 100%; */
-  /* padding: 30px; */
+  margin: 15vh 5vw 10vh;
 }
 
-section {
-  min-height: 40vh;
-  /* width: 100%; */
+/* section */
+.platform-section-container {
+  min-height: 60vh;
+  max-width: 60vw;
+}
+
+.platform-tools {
+  display: grid;
+  grid-template-columns: 30vw 30vw;
+  grid-template-areas:
+    "top        top"
+    "shortcut  description";
+}
+
+.tools-shortcut {
+  grid-area: shortcut;
+}
+
+/* tools shortcut */
+.tools-shortcut h3 {
+  /* padding-top: 20px; */
+}
+
+.tool-selection {
+  text-align: center;
+  border-radius: 5px;
+}
+
+.tool-selection:hover {
+  font-size: 2em;
+  box-shadow: 1px 1px 5px 2px;
+  transition: ease 1s all;
+}
+
+/* tools description */
+.tools-description {
+  grid-area: description;
+}
+
+.tools-description-wrapper {
+  border: 0.5px solid white;
+  border-radius: 5px;
+  height: 30vh;
+  width: 80%;
+  margin-left: 25px;
+}
+
+.tool-description {
+  display: none;
+  text-align: justify;
+  padding: 20px;
 }

@@ -3,6 +3,8 @@ Define Global Variables
 */
 const platformNavigationMenu = document.querySelector('#platform-navbar-list');
 const platformSections = document.querySelectorAll('.platform-section');
+const platformToolSelection = document.querySelectorAll('.tool-selection');
+const platformToolDescription = document.querySelectorAll('.tool-description');
 
 
 /*
@@ -12,7 +14,7 @@ Helper Functions
 
 
 /*
-Main Functions
+Navigation bar creation
 */
 
 // build the nav
@@ -20,6 +22,7 @@ function platformNavigationBarCreation () {
   const platformNavigationBar = document.createDocumentFragment();
 
   platformSections.forEach((platformSection, i) => {
+    const wrapper_platformNavigationMenu = document.createElement('div');
     const li_platformNavigationMenu = document.createElement('li');  // list element to display in the menu
     const a_platformNavigationMenu = document.createElement('a');    // anchor to go to the section
 
@@ -42,6 +45,21 @@ function platformNavigationBarCreation () {
 
 
 /*
+Tool selection animation
+*/
+function displayToolDescription (evt) {
+  // identify which tool is selected
+  platformToolSelection.forEach((item, i)=>{
+    if (evt.target.id == item.id) {
+      platformToolDescription[i].style.display = 'inherit';
+    } else {
+      platformToolDescription[i].style.display = 'none';
+    }
+  });
+}
+
+
+/*
 Events
 */
 
@@ -51,3 +69,7 @@ platformNavigationBarCreation();
 // Scroll to section on link click
 
 // Set sections as active
+
+
+// display tool description
+document.addEventListener('mouseover', displayToolDescription);

@@ -9,6 +9,7 @@ Header style
 */
 .platform-header {
   position: fixed;
+  top: 0;
   width: 100%;
   min-height: 70px;
   height: 8vh;
@@ -18,7 +19,6 @@ Header style
     "logo   navbar  powerOff";
   background-color: white;
   color: black;
-  z-index: 1;
 }
 
 /* logo */
@@ -39,28 +39,30 @@ Header style
 
 /* navigation menu */
 .platform-navbar-menu {
-
+  grid-area: navbar;
+  height: 8vh;
+  min-height: 70px;
 }
 
 #platform-navbar-list {
-  padding-left: 0;
-  padding-top: 2vh;
+  padding-left: 5vw;
   margin: 0;
-  text-align: center;
 }
 
 #platform-navbar-list li{
   display: inline-block;
   width: 18%;
-
 }
 
 .platform-navbar-link {
   text-decoration: none;
+  min-height: 70px;
+  height: 8vh;
   color: black;
   display: block;
-  padding: 2vh;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%)
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  text-align: center;
+  line-height: 8vh;
 }
 
 .platform-navbar-link:hover {
