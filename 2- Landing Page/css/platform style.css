@@ -22,12 +22,15 @@ body {
     color: #fff;
 }
 
+
 .platform-main {
-  width: 100vw;
-  padding: 10px;
+  padding-top: 6em;
+  padding-left: 2em;
+  /* width: 100%; */
+  /* padding: 30px; */
 }
 
 section {
   min-height: 40vh;
-  width: 100%;
+  /* width: 100%; */
 }

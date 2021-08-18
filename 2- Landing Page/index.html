@@ -13,16 +13,22 @@
       <div class="photo-box" id="axa-logo-container">
         <img src="images/axa logo.jpg" alt="AXA logo" id="axa-logo">
       </div>
-      <!-- <nav class="platform-navbar-menu"> -->
+      <nav class="platform-navbar-menu">
         <!-- Navigation starts as empty UL that will be populated with JS -->
-        <!-- <ul id="platform-navbar-list"></ul> -->
-      <!-- </nav> -->
+        <ul id="platform-navbar-list">
+          <li><a href="#" class="platform-navbar-link">Pricing tools</a></li>
+          <li><a href="#" class="platform-navbar-link">Profitability tools</a></li>
+          <li><a href="#" class="platform-navbar-link">Assumptions tools</a></li>
+          <li><a href="#" class="platform-navbar-link">Models tools</a></li>
+          <li><a href="#" class="platform-navbar-link">Other</a></li>
+        </ul>
+      </nav>
       <button type="button" class="button" id="power-off"><i class="fa fa-power-off"></i></button>
     </header>
     <!-- Body -->
     <main class="platform-main">
       <!-- Pricing tools: PPI/GAP, pricing comparator -->
-      <section class="platform-tool-category-section" id="platform-pricing-tools-section" data-nav="Pricing tools">
+      <section class="platform-section" id="platform-pricing-tools-section" data-nav="Pricing tools">
         <h1>Pricing tools</h1>
         <h3 class="tool-launch">PPI/GAP Pricing tool</h3>
         <p class="tool-introduction">Pricing tool for loan, lifestyle and GAP products. It provides the premium estimation and the theoretical profitability of the priced portfolio.</p>
@@ -30,7 +36,7 @@
         <p class="tool-introduction">Market positioning study based on the comparison between theoretical premium and real written premium.</p>
       </section>
       <!-- Profitability tools: per client, PAP, Strat Plan, CQS -->
-      <section class="platform-tool-category-section" id="platform-profitability-tools-section" data-nav="Profitability tools">
+      <section class="platform-section" id="platform-profitability-tools-section" data-nav="Profitability tools">
         <h1>Profitability tools</h1>
         <h3 class="tool-launch">Per client profitability tool</h3>
         <p class="tool-introduction">Profitability study of a portfolio based on the database from a partner and an assumptions file provided by the Assumptions team.</p>
@@ -42,7 +48,7 @@
         <p class="tool-introduction">Profitability study of the whole CQS database.</p>
       </section>
       <!-- Assumption's tools: proximity study, GLM -->
-      <section class="platform-tool-category-section" id="platform-assumptions-tools-section" data-nav="Assumptions tools">
+      <section class="platform-section" id="platform-assumptions-tools-section" data-nav="Assumptions tools">
         <h1>Assumptions tools</h1>
         <h3 class="tool-launch">Proximity study tool</h3>
         <p class="tool-introduction"></p>
@@ -50,15 +56,15 @@
         <p class="tool-introduction"></p>
       </section>
       <!-- Other tools: reserving, ESG -->
-      <section class="platform-tool-category-section" id="platform-other-tools-section" data-nav="Other tools">
-        <h1>Other tools</h1>
+      <section class="platform-section" id="platform-other-tools-section" data-nav="Other tools">
+        <h1>Models tools</h1>
         <h3 class="tool-launch">Economic Scenario Generator</h3>
         <p class="tool-introduction">Economic scenarios generator based on financial models. It allows the user to predict unemployment rates in years to come based on some eocnomic indicator such as the GDP or the inflation.</p>
         <h3 class="tool-launch">Reserving tool</h3>
         <p class="tool-introduction">Reserves computation for life products.</p>
       </section>
       <!-- Other functionality: about page, add new user -->
-      <section class="platform-tool-category-section" id="platform-other-functionalities-section" data-nav="Other">
+      <section class="platform-section" id="platform-other-functionalities-section" data-nav="Other">
         <h1>Other</h1>
         <h3 class="tool-launch">About page</h3>
         <p class="tool-introduction">Platform description: its main goal and how to use it. It also provides contacts to reach out it case of errors with the platform or to perform the analysis of a complex deal or partner.</p>
@@ -70,6 +76,6 @@
     <footer class="platform-footer">
       <p>&copy Copyrights 2021</p>
     </footer>
-    <script type="text/javascript" src="js/platform.js"></script>
+    <!-- <script type="text/javascript" src="js/platform.js"></script> -->
   </body>
 </html>
