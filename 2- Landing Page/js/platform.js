@@ -2,7 +2,7 @@
 Define Global Variables
 */
 const platformNavigationMenu = document.querySelector('#platform-navbar-list');
-const platformSections = document.querySelectorAll('.platform-section');
+const platformSections = document.querySelectorAll('section');
 const platformToolSelection = document.querySelectorAll('.tool-selection');
 const platformToolDescription = document.querySelectorAll('.tool-description');
 
@@ -38,8 +38,43 @@ function platformNavigationBarCreation () {
   platformNavigationMenu.appendChild(platformNavigationBar);
 }
 
-// Add class 'active' to section when near top of viewport
+// identify section in viewport
+function getVisibleSectionIndex() {
+    let minor = window.innerHeight;
+    let visibleSectionIndex = -1;
 
+    platformSections.forEach((platformSection, index) => {
+      let offset = platformSection.getBoundingClientRect(); // top border of the section
+      if(Math.abs(offset.top) < minor) {    // if top of section is below the benchmark, we are in the section
+        minor = Math.abs(offset.top);   // update with the current section top to compare with the next section which one is the most visible
+        visibleSectionIndex = index;
+      }
+    });
+    return visibleSectionIndex;
+}
+
+
+// Add class 'active' to section when near top of viewport
+function setActiveSection () {
+  let visibleSectionIndex = getVisibleSectionIndex();
+  const platformNavigationLinks = document.querySelectorAll('.platform-navbar-link');
+
+  // visible section exists
+  if (visibleSectionIndex != -1) {
+    // loop on each section to show which one we are looking at
+    for (let i = 0; i < platformSections.length; i++){
+      if (i == visibleSectionIndex) {
+        // section visible: add display in nav bar
+        platformSections[i].classList.add('platform-navbar-active-section');
+        platformNavigationLinks[i].classList.add('platform-navbar-active-section');
+      } else {
+        // section invisible: remove display in nav bar
+        platformSections[i].classList.remove('platform-navbar-active-section');
+        platformNavigationLinks[i].classList.remove('platform-navbar-active-section');
+      }
+    }
+  }
+}
 
 // Scroll to anchor ID using scrollTO event
 
@@ -69,7 +104,7 @@ platformNavigationBarCreation();
 // Scroll to section on link click
 
 // Set sections as active
-
+document.addEventListener('scroll', setActiveSection);
 
 // display tool description
 document.addEventListener('mouseover', displayToolDescription);

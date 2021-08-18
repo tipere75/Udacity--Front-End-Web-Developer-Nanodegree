@@ -60,7 +60,6 @@ Header style
   height: 8vh;
   color: black;
   display: block;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
   text-align: center;
   line-height: 8vh;
 }
@@ -69,6 +68,11 @@ Header style
   background: rgba(0,13,60,1);
   color: #fff;
   transition: ease 0.3s all;
+}
+
+.platform-navbar-active-section  {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 
