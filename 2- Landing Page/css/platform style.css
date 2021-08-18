@@ -12,7 +12,6 @@ h1 {
 }
 
 
-
 /*
 Body style
 */
@@ -25,14 +24,11 @@ body {
 }
 
 
-.platform-main {
-  margin: 15vh 5vw 10vh;
-}
-
 /* section */
 .platform-section-container {
   min-height: 70vh;
   max-width: 60vw;
+  padding: 10vh;
 }
 
 .platform-tools {
@@ -48,10 +44,6 @@ body {
 }
 
 /* tools shortcut */
-.tools-shortcut h3 {
-  /* padding-top: 20px; */
-}
-
 .tool-selection {
   text-align: center;
   border-radius: 5px;

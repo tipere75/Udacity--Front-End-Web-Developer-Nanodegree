@@ -14,11 +14,12 @@ Header style
   min-height: 70px;
   height: 8vh;
   display: grid;
-  grid-template-columns: 15% 70% 10%;/*fr;*/
+  grid-template-columns: 15% 70% 1fr;
   grid-template-areas:
     "logo   navbar  powerOff";
   background-color: white;
   color: black;
+  font-size: 0.7em;
 }
 
 /* logo */
@@ -30,8 +31,10 @@ Header style
 
 /* power off button */
 #power-off {
-  min-height: 50px;
-  min-width: 50px;
+  min-height: 70px;
+  min-width: 70px;
+  height: 9vh;
+  width: 9vh;
   grid-area: powerOff;
   position: fixed;
   right: 0;
@@ -84,4 +87,36 @@ Footer style
   background-color: black;
   color: white;
   padding: 1vh;
+}
+
+
+/*
+Screen size adjustments
+*/
+@media only screen and (min-width: 1000px) {
+  .platform-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 70px;
+    height: 8vh;
+    display: grid;
+    grid-template-columns: 15% 70% 1fr;
+    grid-template-areas:
+      "logo   navbar  powerOff";
+    background-color: white;
+    color: black;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  #power-off {
+    min-height: 70px;
+    min-width: 70px;
+    height: 8vh;
+    width: 8vh;
+    grid-area: powerOff;
+    position: fixed;
+    right: 0;
+  }
 }

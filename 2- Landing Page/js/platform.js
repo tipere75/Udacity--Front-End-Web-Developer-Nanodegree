@@ -29,6 +29,11 @@ function platformNavigationBarCreation () {
     a_platformNavigationMenu.innerText = platformSection.getAttribute('data-nav');  // get section name
     a_platformNavigationMenu.setAttribute('class', 'platform-navbar-link');   // set class attribute
 
+    // scroll to anchor ID using scroll to event
+    a_platformNavigationMenu.addEventListener("click", () => {
+      platformSection.scrollIntoView({behavior: "smooth"});
+    });
+
     // add anchor to the list element then to the navigation bar
     li_platformNavigationMenu.appendChild(a_platformNavigationMenu);
     platformNavigationBar.appendChild(li_platformNavigationMenu);
