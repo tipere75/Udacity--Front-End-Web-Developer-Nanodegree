@@ -1,0 +1,87 @@
+/*
+Global
+*/
+h1 {
+	border-bottom: 1px solid gold;
+	max-width: 50%;
+}
+
+
+/*
+Main
+*/
+/* main body */
+main {
+	background: rgb(136,203,171);
+	background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+	margin: 0;
+	font-family: 'Merriweather', serif;
+	color: #fff;
+	width: 100%;
+	left: 0;
+}
+
+/* section */
+section {
+	min-height: 70vh;
+	padding-top: 10vh;
+	padding-left: 5vw;
+}
+
+/* tools shortcut */
+.tools-shortcut {
+	margin-bottom: 5vh;;
+}
+.tool-selection {
+  border-radius: 5px;
+  padding-left: 1%;
+  max-width: 50%;
+}
+.tool-selection:hover {
+  font-size: 2em;
+  box-shadow: 1px 1px 5px 2px;
+  transition: ease 1s all;
+}
+
+/* tools description */
+.tools-description-wrapper {
+  border: 0.5px solid white;
+  border-radius: 5px;
+  height: 30vh;
+  width: 45%;
+  margin-left: 25px;
+}
+.tool-description {
+  display: none;
+  text-align: justify;
+  padding-top: 1vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  font-size: 60%;
+}
+
+
+/*
+Screen size management
+*/
+@media only screen and (min-width: 375px) {
+	.tool-description {
+		display: none;
+		text-align: justify;
+		padding-top: 1vh;
+		padding-left: 5vw;
+		padding-right: 5vw;
+		font-size: 75%;
+	}
+}
+
+@media only screen and (min-width: 500px) {
+	.tool-description {
+		display: none;
+		text-align: justify;
+		padding-top: 1vh;
+		padding-left: 5vw;
+		padding-right: 5vw;
+		font-size: inherit;
+	}
+}

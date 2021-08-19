@@ -3,52 +3,42 @@ Load external files
 */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
-
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
 /*
-Header style
+Header
 */
-.platform-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  min-height: 70px;
-  height: 8vh;
-  display: grid;
-  grid-template-columns: 15% 70% 1fr;
-  grid-template-areas:
-    "logo   navbar  powerOff";
-  background-color: white;
-  color: black;
-  font-size: 0.7em;
+/* global */
+header {
+	height: 8vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	background: white;
+	font-size: 0.5em;
 }
 
 /* logo */
-#axa-logo {
-  min-height: 70px;
-  height: 8vh;
-  grid-area: logo;
+.axa-logo-container {
+	height: 100%;
+	width: auto;
 }
-
-/* power off button */
-#power-off {
-  min-height: 70px;
-  min-width: 70px;
-  height: 9vh;
-  width: 9vh;
-  grid-area: powerOff;
-  position: fixed;
-  right: 0;
+#axa-logo {
+	height: 100%;
 }
 
 /* navigation menu */
 .platform-navbar-menu {
-  grid-area: navbar;
-  height: 8vh;
-  min-height: 70px;
+	height: 100%;
+	width: 90%;
 }
-
 #platform-navbar-list {
-  padding-left: 5vw;
+  padding-left: 0;
   margin: 0;
 }
 
@@ -59,17 +49,18 @@ Header style
 
 .platform-navbar-link {
   text-decoration: none;
-  min-height: 70px;
+  word-spacing: 50px;
   height: 8vh;
   color: black;
   display: block;
   text-align: center;
-  line-height: 8vh;
+  line-height: 4vh;
+  font-size: 0.5em;
 }
 
 .platform-navbar-link:hover {
-  background: rgba(0,13,60,1);
-  color: #fff;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
   transition: ease 0.3s all;
 }
 
@@ -78,45 +69,49 @@ Header style
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-
-/*
-Footer style
-*/
-.platform-footer {
-  height: 5vh;
-  background-color: black;
-  color: white;
-  padding: 1vh;
+/* power off button */
+#power-off-button {
+	height: 100%;
+	width: 5%;
+	min-width: 25px;
 }
 
 
 /*
-Screen size adjustments
+Footer
 */
-@media only screen and (min-width: 1000px) {
-  .platform-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    min-height: 70px;
-    height: 8vh;
-    display: grid;
-    grid-template-columns: 15% 70% 1fr;
-    grid-template-areas:
-      "logo   navbar  powerOff";
-    background-color: white;
-    color: black;
-  }
+footer {
+	height: 10vh;
+	padding: 2vh;
+	background-color: black;
+	color: white;
 }
 
-@media only screen and (min-width: 1920px) {
-  #power-off {
-    min-height: 70px;
-    min-width: 70px;
-    height: 8vh;
-    width: 8vh;
-    grid-area: powerOff;
-    position: fixed;
-    right: 0;
-  }
+
+
+/*
+Screen size management
+*/
+@media only screen and (min-width: 655px) {
+	.platform-navbar-link {
+		text-decoration: none;
+		height: 8vh;
+		color: black;
+		display: block;
+		text-align: center;
+		line-height: 4vh;
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 775px) {
+	.platform-navbar-link {
+		text-decoration: none;
+		word-spacing: inherit;
+		height: 8vh;
+		color: black;
+		display: block;
+		text-align: center;
+		line-height: 8vh;
+	}
 }
