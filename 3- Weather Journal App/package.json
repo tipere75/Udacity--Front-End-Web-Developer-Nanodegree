@@ -1,0 +1,21 @@
+{
+  "name": "weather-journal",
+  "version": "1.0.0",
+  "description": "Asynchronous web app that uses web API and user data to dynamically update the UI",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tipere75/Udacity--Front-End-Web-Developer-Nanodegree-Program/tree/main/3-%20Weather%20Journal%20App"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
