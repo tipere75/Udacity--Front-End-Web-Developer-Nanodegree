@@ -10,3 +10,6 @@ In this project, I build a multi-section landing page, with a dynamically updati
 
 3. Web APIs and asynchronous javascript: <a href="https://github.com/tipere75/Udacity--Front-End-Web-Developer-Nanodegree-Program/tree/main/3-%20Weather%20Journal%20App">Weather Journal App</a>  
 In this project, I created an asynchronous web app that uses Web API and user data to dynamically update the UI.
+
+4. Build tools: <a href="https://github.com/tipere75/Udacity--Front-End-Web-Developer-Nanodegree-Program/tree/main/4-%20Evaluate%20news%20nlp">Evaluate news with NLP</a>  
+In this project, I build a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites
