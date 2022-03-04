@@ -6,10 +6,14 @@ const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 const app = express()
 const fetch = require('node-fetch')
-
+const bodyParser = require('body-parser')
+const cors = require('cors');
 
 
 app.use(express.static('dist'))
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cors());
 
 console.log(__dirname)
 
@@ -34,10 +38,12 @@ app.get('/test', function (req, res) {
 app.post('/article', async function(req, res) {
   const baseURL = 'https://api.meaningcloud.com/sentiment-2.1';
 
-  const response = await fetch(`${baseURL}?key=${process.env.API_KEY}&lang=auto&txt=${req.body}`);
+  // console.log(req.body.url);
+  const response = await fetch(`${baseURL}?key=${process.env.API_KEY}&lang=en&url=${req.body.url}`);
 
   try{
     const data = await response.json();
+    // console.log(data);
     res.send(data);
   } catch(error) {
     console.log("error: ", error);

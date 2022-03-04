@@ -1,9 +1,5 @@
 // import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+import { polarityMapping } from './js/formHandler'
 
-// console.log(checkForName);
-
-// alert("I EXIST")
-// console.log("CHANGE!!");
-
-export { handleSubmit }
+export { handleSubmit, polarityMapping }
