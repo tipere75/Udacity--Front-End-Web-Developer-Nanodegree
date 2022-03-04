@@ -1,12 +1,25 @@
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
-}
+  border: 1px solid #545454;
+  border-radius: 3px;
+  padding: 40px;
 
-input {
+  input {
     padding: 5px 20px;
     width: 100%;
     line-height: 16px;
     margin: 10px 0;
+    border-radius: 5px;
+  }
+  .incorrect-url {
+    border: 3px solid red;
+    color: red;
+  }
+}
+
+.outputs {
+  margin-top: 25px;
+
+  #outputs-title {
+    font-weight: bold;
+  }
 }
