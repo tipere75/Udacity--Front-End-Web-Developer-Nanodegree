@@ -5,7 +5,13 @@ import './styles/header.scss'
 import './styles/resets.scss'
 
 import { handleSubmit } from './js/formHandler'
+import { postData } from './js/formHandler'
 import { polarityMapping } from './js/formHandler'
 import { checkForURL } from './js/urlChecker'
 
-export { handleSubmit, polarityMapping, checkForURL }
+export {
+  handleSubmit,
+  postData,
+  polarityMapping,
+  checkForURL
+}

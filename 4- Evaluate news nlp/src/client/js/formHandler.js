@@ -28,11 +28,10 @@ function handleSubmit(event) {
       document.getElementById('confidence').innerHTML = ``;
       document.getElementById('irony').innerHTML = ``;
     }
-
 }
 
 // function for mapping polarity score
-const polarityMapping = function(polarityScore) {
+function polarityMapping(polarityScore) {
   let result;
   switch(polarityScore) {
     case 'P+':
@@ -58,7 +57,7 @@ const polarityMapping = function(polarityScore) {
 }
 
 // function to POST data
-const postData = async function(url = '', data = {}) {
+async function postData(url = '', data = {}) {
   console.log('Submitted: ', data);
   const response = await fetch(url, {
     method: 'POST',
@@ -79,6 +78,7 @@ const postData = async function(url = '', data = {}) {
   }
 }
 
-// export function for submitting article
+// export functions
 export { handleSubmit }
+export { postData }
 export { polarityMapping }
