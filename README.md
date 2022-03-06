@@ -15,4 +15,4 @@ In this project, I created an asynchronous web app that uses Web API and user da
 In this project, I build a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.
 
 5. Capstone: <a href="https://github.com/tipere75/Udacity--Front-End-Web-Developer-Nanodegree-Program/tree/main/5-%20Travel%20App">Travel App</a>\
-In this project, I build an app to plan a trip. Given the date and the location, the app will display an image of the location, the weather forecast for the given period of time and other similar informations.
+In this project, I build an app to plan a trip. Given the date and the location, the app will display an image of the place, the weather forecast for the given period of time and other similar informations.
