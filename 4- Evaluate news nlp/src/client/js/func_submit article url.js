@@ -4,8 +4,7 @@
 export { f_submitArticleURL }
 export { f_postData }
 
-// const fetch = require("node-fetch");
-// import fetch from "node-fetch"
+const fetch = require("node-fetch")
 
 /*
  * functions
