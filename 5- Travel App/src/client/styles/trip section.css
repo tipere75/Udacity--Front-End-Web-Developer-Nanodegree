@@ -1,0 +1,49 @@
+#trip-info-section {
+  background-color: #73bee7;
+  height: calc(100% - 50px);
+  /* display: none; */
+}
+
+
+.trip-image {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+
+
+.trip-info {
+  width: 100%;
+  height: 50%;
+  /* text-align: center; */
+  background-color: white;
+}
+.trip-info-content {
+  position: relative;
+  top: 20px;
+  left: 50px;
+  display: grid;
+  grid-template-columns: 30vw 30vw auto;
+}
+.column {
+  display: inline-block;
+}
+
+h4 span {
+  font-weight: normal;
+}
+
+button {
+  height: 40px;
+  padding: 10px;
+  font-weight: bold;
+  border: 1px black solid;
+  border-radius: 10px;
+  color: white;
+}
+#bttn-save {
+  background-color: #00d310;
+}
+#bttn-delete {
+  background-color: #d60000;
+}

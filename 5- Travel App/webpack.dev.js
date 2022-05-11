@@ -22,14 +22,26 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-            }
+            },
+            {
+              test: /\.(gif|png|jpe?g)$/,
+              use: [
+                {
+                  loader: 'file-loader',
+                  options: {
+                    name: '[name].[ext]',
+                    outputPath: 'media/'
+                  }
+                }
+              ]
+            },
         ]
     },
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/client/views/index.html",
             filename: "./index.html",
-        })
+        }),
 
         new CleanWebpackPlugin({
                 // Simulate the removal of files
@@ -38,6 +50,7 @@ module.exports = {
                 verbose: true,
                 // Automatically remove all unused webpack assets on rebuild
                 cleanStaleWebpackAssets: true,
+                // Do not allow removal of current webpack assets
                 protectWebpackAssets: false
         })
     ]

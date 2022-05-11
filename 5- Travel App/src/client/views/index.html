@@ -2,20 +2,66 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>My travel app</title>
+    <title>Travel App</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/trip config section.css">
+    <link rel="stylesheet" href="../styles/trip section.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/add travel.js" charset="utf-8"></script>
   </head>
-
   <body>
-
+    <header>
+      <p>My Travel App</p>
+    </header>
+    <div class="content">
+      <!-- section to configure initial travel -->
+      <section id="trip-config-section">
+        <div class="trip-config-image">
+          <img src="../media/globe.jpg" alt="globe">
+        </div>
+        <form class="travel-inputs" method="post" onsubmit="displayTravelInformations(); return false;">
+          <div class="row">
+            <label for="start-date">Start date</label>
+            <input type="date" name="start-date" id="start-date" value="">
+          </div>
+          <div class="row">
+            <label for="end-date">End date</label>
+            <input type="date" name="end-date" id="end-date" value="">
+          </div>
+          <div class="row">
+            <label for="destination">Destination</label>
+            <input type="text" name="destination" id="destination" value="">
+          </div>
+          <input type="submit" name="submit" value="Add your trip">
+        </form>
+      </section>
+      <!-- section to display travel informations -->
+      <section id="trip-info-section" class="section-hidden">
+        <div class="trip-image">
+          <img src="#" alt="Travel location">
+        </div>
+        <div class="trip-info">
+          <div class="trip-info-content">
+            <div class="column">
+              <h4>Destination: <span>Paris, France</span></h4>
+              <h4>Departure date: <span>01-01-2022</span> </h4>
+              <h4>Return date: <span>01-02-2022</span> </h4>
+              <h4>Travel duration: <span>31 days</span> </h4>
+              <h4>Number of days before departure: <span>31 days</span> </h4>
+              <h4>Additional informations:</h4>
+              <textarea name="additional-informations" rows="10" cols="50"></textarea>
+            </div>
+            <div class="column">
+              <h4>Weather forecast:</h4>
+            </div>
+            <div class="column">
+              <button type="button" name="button" id="bttn-save"><i class="fas fa-save"></i> Save trip</button>
+              <button type="button" name="button" id="bttn-delete" onclick="displayTravelRequest();"><i class="fas fa-times-circle"></i></i> Delete trip</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
-
-  <script>
-    // Check that service workers are supported
-    if ('serviceWorker' in navigator) {
-      // Use the window load event to keep the page load performant
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js');
-      });
-    }
-  </script>
 </html>

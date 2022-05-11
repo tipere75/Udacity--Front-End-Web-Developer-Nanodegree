@@ -1,0 +1,39 @@
+#trip-config-section {
+  background-color: #73bee7;
+  height: 100vh;
+}
+.trip-config-image {
+  width: 100%;
+  text-align: center;
+}
+img {
+  position: relative;
+  height: 600px;
+  border-radius: 600px;
+}
+
+
+.travel-inputs {
+  display: block;
+  text-align: center;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input {
+  border-radius: 5px;
+  width: 200px;
+  height: 25px;
+}
+input[type='submit'] {
+  margin-top: 10px;
+  height: 40px;
+  border-radius: 100px;
+  border: 2px solid #0003CA;
+  background-color: #00d310;
+}
