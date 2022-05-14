@@ -1,7 +1,6 @@
 #trip-info-section {
   background-color: #73bee7;
   height: calc(100% - 50px);
-  /* display: none; */
 }
 
 
@@ -10,7 +9,14 @@
   height: 50%;
   text-align: center;
 }
-
+.trip-image img {
+  position: relative;
+  display: block;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 50%;
+}
 
 .trip-info {
   width: 100%;
@@ -22,15 +28,22 @@
   position: relative;
   top: 20px;
   left: 50px;
+  width: calc(100% - 50px);
   display: grid;
   grid-template-columns: 30vw 30vw auto;
+  padding-bottom: 50px;
 }
 .column {
   display: inline-block;
+  width: 100%;
 }
 
 h4 span {
   font-weight: normal;
+}
+
+textarea {
+  size: 100%;
 }
 
 button {
