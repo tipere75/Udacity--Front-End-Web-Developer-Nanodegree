@@ -23,3 +23,22 @@ header {
 .section-hidden {
   display: none;
 }
+
+
+/*
+Screen size management
+*/
+@media only screen and (max-width: 1000px) {
+	.content {
+		font-size: 75%;
+    display: block;
+	}
+
+  .trip-info .trip-info-content {
+    display: block;
+  }
+
+  textarea {
+    max-inline-size: 80%;
+  }
+}
