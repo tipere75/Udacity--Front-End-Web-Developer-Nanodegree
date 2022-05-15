@@ -5,8 +5,8 @@ import './styles/trip section.scss'
 
 import globe from './media/globe.jpg'
 
-import { displayTravelInformations } from './js/add travel.js'
-import { displayTravelRequest } from './js/add travel.js'
+import { displayTravelInformations } from './js/section navigation.js'
+import { displayTravelRequest } from './js/section navigation.js'
 
 export {
     displayTravelInformations,
