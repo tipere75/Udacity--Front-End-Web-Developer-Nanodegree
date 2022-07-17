@@ -8,10 +8,12 @@ let globeImage = document.getElementById("globe");
 globeImage.src = globe;
 
 
-import { displayTravelInformations, displayTravelRequest } from './js/add travel.js'
+import { f_displayTravelInformations, f_displayTravelRequest } from './js/section navigation.js'
+import { f_requestTravelInformations } from './js/request travel informations.js'
 
 
 export {
-    displayTravelInformations,
-    displayTravelRequest
+    f_displayTravelInformations,
+    f_displayTravelRequest,
+    f_requestTravelInformations
 }

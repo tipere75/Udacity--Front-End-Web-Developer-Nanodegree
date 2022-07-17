@@ -16,7 +16,7 @@
         <div class="trip-config-image">
           <img id="globe" alt="globe">
         </div>
-        <form class="travel-inputs" method="" onsubmit="Client.displayTravelInformations(); return false;">
+        <form class="travel-inputs" onsubmit="return Client.f_requestTravelInformations(event);">
           <div class="row">
             <label for="start-date">Start date</label>
             <input type="date" name="start-date" id="start-date" value="">
@@ -54,10 +54,11 @@
               <h4>Weather forecast:</h4>
               <p>first day</p>
               <p>second day</p>
+              <div id="results"></div>
             </div>
             <div class="column">
               <button type="button" name="button" id="bttn-save"><em class="fas fa-save"></em> Save trip</button>
-              <button type="button" name="button" id="bttn-delete" onclick="Client.displayTravelRequest();"><em class="fas fa-times-circle"></em> Delete trip</button>
+              <button type="button" name="button" id="bttn-delete" onclick="return Client.f_displayTravelRequest();"><em class="fas fa-times-circle"></em> Delete trip</button>
             </div>
           </div>
         </div>
