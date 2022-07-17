@@ -6,12 +6,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
     entry: './src/client/index.js',
     mode: 'development',
-    devtool: 'source-map',
-    stats: 'verbose',
     output: {
+        path: path.join(__dirname, 'dist'),
+        filename: 'bundle.min.js',
         libraryTarget: 'var',
         library: 'Client'
     },
+    devtool: 'source-map',
+    stats: 'verbose',
     module: {
         rules: [
             {
@@ -24,17 +26,15 @@ module.exports = {
                 use: [ 'style-loader', 'css-loader', 'sass-loader' ]
             },
             {
-              test: /\.(gif|png|jpe?g)$/,
-              use: [
-                {
-                  loader: 'file-loader',
-                  options: {
-                    name: '[name].[ext]',
-                    outputPath: 'media/'
-                  }
-                }
-              ]
-            },
+                test: /\.(png|jp(e*)g|svg)$/,  
+                use: [{
+                    loader: 'url-loader',
+                    options: { 
+                        limit: 8000, // Convert images < 8kb to base64 strings
+                        name: 'media/[hash]-[name].[ext]'
+                    } 
+                }]
+            }
         ]
     },
     plugins: [
@@ -42,16 +42,18 @@ module.exports = {
             template: "./src/client/views/index.html",
             filename: "./index.html",
         }),
-
         new CleanWebpackPlugin({
-                // Simulate the removal of files
-                dry: true,
-                // Write Logs to Console
-                verbose: true,
-                // Automatically remove all unused webpack assets on rebuild
-                cleanStaleWebpackAssets: true,
-                // Do not allow removal of current webpack assets
-                protectWebpackAssets: false
+            // Simulate the removal of files
+            dry: true,
+            // Write Logs to Console
+            verbose: true,
+            // Automatically remove all unused webpack assets on rebuild
+            cleanStaleWebpackAssets: true,
+            protectWebpackAssets: false
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
         })
     ]
 }
