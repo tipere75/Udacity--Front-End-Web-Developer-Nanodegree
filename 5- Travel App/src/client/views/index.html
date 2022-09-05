@@ -35,26 +35,26 @@
       <!-- section to display travel informations -->
       <section id="trip-info-section" class="section-hidden">
         <div class="trip-image">
-          <img src="#" alt="Travel location">
+          <img src="#" alt="Travel location" id="trip-image1">
+          <img src="#" alt="Travel location" id="trip-image2">
+          <img src="#" alt="Travel location" id="trip-image3">
         </div>
         <div class="trip-info">
           <div class="trip-info-content">
             <div class="column">
-              <h4>Destination: <span>Paris, France</span></h4>
-              <h4>Departure date: <span>01-01-2022</span> </h4>
-              <h4>Return date: <span>01-02-2022</span> </h4>
-              <h4>Travel duration: <span>31 days</span> </h4>
-              <h4>Number of days before departure: <span>31 days</span> </h4>
+              <h4>Destination: <span id="trip-info-content-destination"></span></h4>
+              <h4>Departure date: <span id="trip-info-content-start-date"></span> </h4>
+              <h4>Return date: <span id="trip-info-content-end-date"></span> </h4>
+              <h4>Travel duration: <span id="trip-info-content-duration"></span> </h4>
+              <h4>Number of days before departure: <span id="trip-info-content-time-to-departure"></span> </h4>
               <h4>Additional informations:</h4>
               <textarea name="additional-informations" rows="10" cols="35"></textarea>
             </div>
             <div class="column">
-              <h4>Today's weather:</h4>
-              <p>today</p>
               <h4>Weather forecast:</h4>
-              <p>first day</p>
-              <p>second day</p>
-              <div id="results"></div>
+              <div id="weather-forecast-1"></div>
+              <div id="weather-forecast-2"></div>
+              <div id="weather-forecast-3"></div>
             </div>
             <div class="column">
               <button type="button" name="button" id="bttn-save"><em class="fas fa-save"></em> Save trip</button>
