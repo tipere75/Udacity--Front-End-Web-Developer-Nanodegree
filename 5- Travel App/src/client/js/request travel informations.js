@@ -12,35 +12,35 @@ function f_requestTravelInformations (event) {
     let checkDates = Client.f_checkDates(startDate, endDate);
     if (checkDates === false) {
         alert('Please set a start date prior to end date !')
-        return(0)
-    }
 
-    // submit request
-    console.log("::: Form Submitted :::")
-    Client.f_postData('http://localhost:8080/getCityLocation', {destination: destination, startDate: startDate, endDate: endDate})
-    .then(function(resGeonames) {
-        
-        // update trip informations
-        Client.f_updateTripDatesAndDuration(destination, startDate, endDate, resGeonames)
+    } else {
+        // submit request
+        console.log("::: Form Submitted :::")
+        Client.f_postData('http://localhost:8080/getCityLocation', {destination: destination, startDate: startDate, endDate: endDate})
+        .then(function(resGeonames) {
+            
+            // update trip informations
+            Client.f_updateTripDatesAndDuration(destination, startDate, endDate, resGeonames)
 
-        Client.f_postData('http://localhost:8080/getWeatherForecasts', {lat: resGeonames.geonames[0].lat, lng: resGeonames.geonames[0].lng})
-        .then(function(resWeatherbit) {
-            console.log(resWeatherbit)
+            Client.f_postData('http://localhost:8080/getWeatherForecasts', {lat: resGeonames.geonames[0].lat, lng: resGeonames.geonames[0].lng})
+            .then(function(resWeatherbit) {
+                console.log(resWeatherbit)
 
-            Client.f_updateWeatherForecast(resWeatherbit)
-        })
-
-    })
-    .then(() => {
-        Client.f_postData('http://localhost:8080/getPictures', {destination: destination})
-        .then(function(resPixabay) {
-            Client.f_uploadPixabayImages(resPixabay)
+                Client.f_updateWeatherForecast(resWeatherbit)
+            })
 
         })
-    })
-    .then(() => {
-        Client.f_displayTravelInformations();
-    })
+        .then(() => {
+            Client.f_postData('http://localhost:8080/getPictures', {destination: destination})
+            .then(function(resPixabay) {
+                Client.f_uploadPixabayImages(resPixabay)
+
+            })
+        })
+        .then(() => {
+            Client.f_displayTravelInformations();
+        })
+    } 
 
     return 0;
 }

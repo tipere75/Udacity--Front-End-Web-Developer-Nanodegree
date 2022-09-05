@@ -11,7 +11,7 @@ globeImage.src = globe;
 import { f_displayTravelInformations, f_displayTravelRequest } from './js/section navigation.js'
 import { f_requestTravelInformations, f_postData } from './js/request travel informations.js'
 import { f_updateTripDatesAndDuration, f_updateWeatherForecast, f_uploadPixabayImages } from './js/update travel informations page.js'
-import { f_datedif, f_checkDates } from './js/utils.js'
+import { f_datedif, f_checkDates, f_saveTrip, f_deleteTrip, f_getInitialPage } from './js/utils.js'
 
 
 export {
@@ -23,5 +23,8 @@ export {
     f_updateWeatherForecast,
     f_uploadPixabayImages,
     f_datedif,
-    f_checkDates
+    f_checkDates,
+    f_saveTrip,
+    f_deleteTrip,
+    f_getInitialPage
 }
