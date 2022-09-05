@@ -4,7 +4,7 @@
   "description": "For this 5th project, I build from scratch an app to plan a trip. Given the date and the location, the app will display the following informations: - an image of the place - the weather forecast for the given period of time",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node src/server/server.js",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
@@ -29,6 +29,7 @@
     "css-minimizer-webpack-plugin": "^4.0.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.0.2",
     "jquery": "^3.6.0",
     "mini-css-extract-plugin": "^2.6.1",
     "node-sass": "^7.0.1",
